@@ -1,0 +1,73 @@
+final Runnable thread = new Runnable()
+                {
+                    @Override
+                    public void run()
+                    {
+                        System.out.println("Start recording...");
+                        try
+                        {
+                            recorder.start();
+                        }
+                        catch (LineUnavailableException e)
+                        {
+                            e.printStackTrace();
+                        }
+
+                    }
+                };
+
+                Thread recordThread = new Thread(thread);
+
+                recordThread.start();
+
+                try
+                {
+                    Thread.sleep(240000 + 45000);
+                    recorder.stop();
+                    recorder.save(JavaSoundRecorder.wavFile);
+                }
+                catch (InterruptedException e1)
+                {
+                    e1.printStackTrace();
+                }
+                catch (IOException e1)
+                {
+                    e1.printStackTrace();
+                }
+            }
+        }
+        
+        
+        
+        
+        = new File("C:\\Users\\Glenda\\Desktop\\Sample.wav");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+                        if (recorder != null)
+                {
+                    try
+                    {
+                        if (recorder != null)
+                        {
+                            recorder.stop();
+                            recorder.save(JavaSoundRecorder.wavFile);
+                            System.out.println("Recording  Stopped...");
+                            System.out.println("Audio file saved...");
+                        }
+
+                    }
+                    catch (IOException ex)
+                    {
+                        ex.printStackTrace();
+                    }
+                }
